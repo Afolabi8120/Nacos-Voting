@@ -53,17 +53,11 @@
                                     <div class="u-text">
                                         <h4><?php echo $getStudent->fullname; ?></h4>
                                         <p class="text-muted"><?php echo $getStudent->email; ?></p>
-                                        <a href="profile" class="btn btn-xs btn-dark btn-sm">
-                                            View Profile
+                                        <a href="logout" class="btn btn-xs btn-dark btn-sm">
+                                            Logout
                                         </a>
                                     </div>
                                 </div>
-                            </li>
-                            <li>    
-                                <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="change_password">Change Password</a>
-                                <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="logout">Logout</a>
                             </li>
                         </div>
                     </ul>
