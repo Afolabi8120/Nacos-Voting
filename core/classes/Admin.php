@@ -79,14 +79,25 @@
 		}
 
 		public function submitVote($student_id,$candidate_id,$post,$student_level){
-			$stmt = $this->pdo->prepare("INSERT INTO tblvote (student_id,candidate_id,post,student_level) VALUES(:student_id,:candidate_id,:post,:student_level)");
-			$stmt->bindParam(":student_id", $student_id, PDO::PARAM_STR);
-			$stmt->bindParam(":candidate_id", $candidate_id, PDO::PARAM_STR);
-			$stmt->bindParam(":post", $post, PDO::PARAM_STR);
-			$stmt->bindParam(":student_level", $student_level, PDO::PARAM_STR);
-			$stmt->execute();
 
-			return true;
+			$stmt = $this->pdo->prepare("SELECT student_id, post FROM tblvote WHERE student_id='$student_id' AND post='$post' ");
+			$stmt->execute();
+			$user = $stmt->fetch(PDO::FETCH_OBJ);
+			$count = $stmt->rowCount();
+
+			if($count > 0){
+                return false;
+			}else{
+				$stmt = $this->pdo->prepare("INSERT INTO tblvote (student_id,candidate_id,post,student_level) VALUES(:student_id,:candidate_id,:post,:student_level)");
+				$stmt->bindParam(":student_id", $student_id, PDO::PARAM_STR);
+				$stmt->bindParam(":candidate_id", $candidate_id, PDO::PARAM_STR);
+				$stmt->bindParam(":post", $post, PDO::PARAM_STR);
+				$stmt->bindParam(":student_level", $student_level, PDO::PARAM_STR);
+				$stmt->execute();
+
+				return true;
+			}
+			
 		}
 
 		// Add candidate

@@ -23,7 +23,7 @@
             if($admin->submitVote($student_id,$candidate_id,$post,$student_level) === true){
                 echo "<script>alert('Vote Casted Successfully'); </script>";
             }else{
-                echo "<script>alert('Failed to Cast Vote'); </script>";
+                echo "<script>alert('You have casted your vote already'); </script>";
             }
         }
 
