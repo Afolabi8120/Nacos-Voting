@@ -62,7 +62,7 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="profile">My Vote</a>
+								<a href="my-vote">My Vote</a>
 							</li>
 						</ul>
 					</div>
@@ -88,15 +88,36 @@
                                                         <th>S/N</th>
                                                         <th>Candidate</th>
                                                         <th>Post</th>
+                                                        <th>Percentage</th>
+                                                        <th>Votes</th>
                                                     </tr>
                                                 </thead>
                                                 
                                                 <tbody>
-                                                    <?php $i = 1; foreach($admin->getMyVotes($getStudent->email) as $getemail): ?>
+                                                    <?php $i = 1; foreach($admin->getMyVotes($getStudent->email) as $getemail): 
+
+                                                        $colors = ['success', 'primary', 'dark', 'warning', 'danger'];
+                                                        $rand = rand(0,4);
+                                                    ?>
                                                     <tr>
                                                         <td class="text-bold-500"><?php echo $i++; ?></td>
                                                         <td class="text-bold-500"><?php echo $getemail->fullname; ?></td>
                                                         <td><?php echo $getemail->post; ?></td>
+                                                        <td>
+                                                            <span class="badge bg-dark text-white">
+                                                            <?php
+                                                                $totalVote = $admin->getTotalVoteWhere($getemail->post);
+                                                                $candidateVote = $admin->getTotalCandidateVote($getemail->id);
+
+                                                                $vote = ($candidateVote / $totalVote) * 100;
+
+                                                                echo round($vote);
+                                                                ?> %
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $admin->getTotalCandidateVote($getemail->id); ?>
+                                                        </td>
                                                     </tr>
                                                     <?php endforeach; ?>
                                                 </tbody>

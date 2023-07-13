@@ -15,6 +15,34 @@
 			return $var;
 		}
 
+		public function checkEmail($email){
+        	$stmt = $this->pdo->prepare("SELECT email FROM tblstudent WHERE email = :email");
+        	$stmt->bindParam(":email", $email, PDO::PARAM_STR);
+        	$stmt->execute();
+
+        	$count = $stmt->rowCount();
+
+        	if($count > 0){
+				return true;
+			}else{
+				return false;
+			}
+        }
+
+        public function checkUsername($username){
+        	$stmt = $this->pdo->prepare("SELECT username FROM tblstudent WHERE username = :username");
+        	$stmt->bindParam(":username", $username, PDO::PARAM_STR);
+        	$stmt->execute();
+
+        	$count = $stmt->rowCount();
+
+        	if($count > 0){
+				return true;
+			}else{
+				return false;
+			}
+        }
+
 		// this will generate the image name for the student based on its gender
 		public function setImageName($name){
             if($name == "Male"){
@@ -100,6 +128,24 @@
 			
 		}
 
+		public function addUserVoteStatus($student_id,$status){
+			$stmt = $this->pdo->prepare("SELECT * FROM tblcount WHERE student_id='$student_id' AND status = 1 ");
+			$stmt->execute();
+			$user = $stmt->fetch(PDO::FETCH_OBJ);
+			$count = $stmt->rowCount();
+
+			if($count > 0){
+                return false;
+			}else{
+				$stmt = $this->pdo->prepare("INSERT INTO tblcount (student_id,status) VALUES(:student_id,:status)");
+				$stmt->bindParam(":student_id", $student_id, PDO::PARAM_STR);
+				$stmt->bindParam(":status", $status, PDO::PARAM_STR);
+				$stmt->execute();
+
+				return true;
+			}
+		}
+
 		// Add candidate
 		public function registerCandidate($fullname,$post,$picture){
 			$stmt = $this->pdo->prepare("INSERT INTO tblcandidate (fullname,post,picture) VALUES(:fullname,:post,:picture)");
@@ -126,10 +172,37 @@
 		}
 
 		public function getMyVotes($email){
+			$stmt = $this->pdo->prepare("SELECT c.id, c.fullname, c.post FROM tblvote AS v INNER JOIN tblcandidate AS c ON v.candidate_id = c.id WHERE v.student_id = '$email' ");
+			$stmt->execute();
+
+			return $stmt->fetchAll(PDO::FETCH_OBJ);
+		}
+
+		public function forProgressBar($email){
 			$stmt = $this->pdo->prepare("SELECT c.fullname, c.post FROM tblvote AS v INNER JOIN tblcandidate AS c ON v.candidate_id = c.id WHERE v.student_id = '$email' ");
 			$stmt->execute();
 
 			return $stmt->fetchAll(PDO::FETCH_OBJ);
+		}
+
+		public function getTotalCandidateVote($can_id){
+			$stmt = $this->pdo->prepare("SELECT candidate_id FROM tblvote WHERE candidate_id = '$can_id' ");
+			$stmt->execute();
+
+			$user = $stmt->fetch(PDO::FETCH_OBJ);
+			$count = $stmt->rowCount();
+
+			return $count;
+		}
+
+		public function getTotalVoteWhere($post){
+			$stmt = $this->pdo->prepare("SELECT * FROM tblvote WHERE post = '$post' ");
+			$stmt->execute();
+
+			$user = $stmt->fetch(PDO::FETCH_OBJ);
+			$count = $stmt->rowCount();
+
+			return $count;
 		}
 
 		public function getCandidateVoteCount($post){
@@ -234,6 +307,21 @@
 
 		public function select($table,$column,$value,$email){
 			$stmt = $this->pdo->prepare("SELECT * FROM `$table` WHERE `$column` = '$value' AND payment_status = '1' AND email = :email ");
+			$stmt->bindParam(":email",$email, PDO::PARAM_STR);
+			$stmt->execute();
+
+			$user = $stmt->fetch(PDO::FETCH_OBJ);
+			$count = $stmt->rowCount();
+
+			if($count > 0){
+                return true;
+			}else{
+				return false;
+			}
+		}
+
+		public function checkUserVoteStatus($email){
+			$stmt = $this->pdo->prepare("SELECT * FROM `tblcount` WHERE `student_id` = :email AND status = '1' ");
 			$stmt->bindParam(":email",$email, PDO::PARAM_STR);
 			$stmt->execute();
 

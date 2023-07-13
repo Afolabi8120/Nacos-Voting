@@ -33,7 +33,7 @@
                         }else{
                             $_SESSION['ErrorMessage'] = "Your Account Has Been Deactivated";
                         }
-                    }elseif($getStudentDetails->usertype == 'Super Admin'){
+                    }elseif($getStudentDetails->usertype == 'Super Admin' || $getStudentDetails->usertype == 'Admin'){
                         if($getStudentDetails->status == 'Active'){
                             $_SESSION['session_id'] = session_id();
                             $_SESSION['username'] = $getStudentDetails->email;

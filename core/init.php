@@ -1,7 +1,5 @@
 <?php
 	include('database/config.php');
-    #include('classes/class.phpmailer.php');
-    #include('classes/class.smtp.php');
 	include('classes/Admin.php');
 	include('classes/Student.php');
 
@@ -34,6 +32,13 @@
 
     }
 
+    function TestMessage(){
+        if(isset($_SESSION['TestMessage'])){
+            return $_SESSION['TestMessage'];
+        }
+
+    }
+
 	define("BASE_URL", "http://localhost/vote/");
 
 	date_default_timezone_set("Africa/Lagos");
@@ -48,4 +53,10 @@
     }else {
         $getdate = "Good Morning";
     }
+
+
+
 ?>
+
+<script src="../assets/js/sweetalert/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/sweetalert/sweetalert2.all.min.js"></script>

@@ -44,9 +44,6 @@
                                     <div class="u-text">
                                         <h4><?php echo $getAdmin->fullname; ?></h4>
                                         <p class="text-muted"><?php echo $getAdmin->email; ?></p>
-                                        <a href="profile" class="btn btn-xs btn-dark btn-sm">
-                                            View Profile
-                                        </a>
                                     </div>
                                 </div>
                             </li>

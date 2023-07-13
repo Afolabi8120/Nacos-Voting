@@ -14,13 +14,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('President') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -41,13 +39,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Vice President') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -68,13 +64,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('General Secretary') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -95,7 +89,7 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Financial Secretary') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
@@ -122,13 +116,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Treasurer') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -149,13 +141,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Auditor') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -176,13 +166,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Software Director 1') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -203,13 +191,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Welfare Director 1') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -230,13 +216,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Social Director 1') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -257,13 +241,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Sport Director 1') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -284,13 +266,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('PRO 1') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -311,13 +291,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Software Director 2') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -338,13 +316,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Welfare Director 2') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -365,13 +341,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Social Director 2') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -392,13 +366,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('Sport Director 2') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -419,13 +391,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <?php foreach($admin->getCandidateVoteCount('PRO 2') as $getuser){ ?>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body text-center mb-0">
                                                         <img src="../candidate_image/<?php echo $getuser->picture; ?>" alt="candidate image" height="150px" width="150px">
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <span class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></span>
+                                                        <p class="text-center small fw-bold mt-2"><?php echo $getuser->fullname; ?></p>
                                                     </div>
                                                     <div class="card-footer">
                                                         <h1 class="text-center fw-bold"><?php echo $getuser->vote_count; ?></h1>
@@ -438,4 +408,3 @@
                                 </div>
                             </div>
 
-?>

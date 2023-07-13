@@ -169,6 +169,7 @@
                                                         <td>
                                                             <form method="POST">
                                                                 <input type="hidden" name="candidate_id" value="<?php echo $candidate->id; ?>">
+                                                                <input type="hidden" name="candidate_img" value="<?php echo $candidate->picture; ?>">
                                                                 <input type="submit" onclick="return confirm('Delete this record?');" class="mt-2 btn btn-sm btn-danger" value="Delete" name="btn_delete_candidate">
                                                             </form>
                                                         </td>

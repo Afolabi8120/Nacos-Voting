@@ -25,15 +25,6 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/atlantis.css">
     <link rel="stylesheet" href="../assets/css/atlong.css">
-    <style type="text/css" media="screen">
-        input[type='radio'] {
-            border: 0px;
-            width: 100%;
-            height: 30px;
-            font-size: 25px;
-        }
-        
-    </style>
 </head>
 <body>
     <?php
@@ -83,7 +74,6 @@
                             echo SuccessMessage();
                             echo TestMessage();
                         ?>
-                        <form method="POST">
                         <div class="row">
                             <div class="col-sm-12 col-md-12">
                                 <div class="card">
@@ -105,8 +95,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','President') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                                <center><input type="radio" name="president" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="president_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" id="btnSubmitVote" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -137,8 +130,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Vice President') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="vp" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="vp_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -169,8 +165,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','General Secretary') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="gen_sec" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="gs_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -201,8 +200,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Financial Secretary') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="fin_sec" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="fs_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -233,8 +235,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Treasurer') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="treasurer" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="treasurer_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -265,8 +270,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Auditor') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="auditor" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="auditor_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -297,8 +305,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Software Director 1') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="software1" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="software1_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -329,8 +340,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Welfare Director 1') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="welfare1" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="welfare1_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -361,8 +375,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Social Director 1') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="social1" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="social1_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -393,8 +410,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Sport Director 1') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="sport1" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="sport1_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -425,8 +445,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','PRO 1') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="pro1" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="pro1_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -457,8 +480,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Software Director 2') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="software2" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="software2_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -489,8 +515,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Welfare Director 2') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="welfare2" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="welfare2_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -521,8 +550,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Social Director 2') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="social2" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="social2_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -553,8 +585,11 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','Sport Director 2') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="sport2" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="sport2_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
@@ -585,23 +620,22 @@
                                                         <?php if($admin->selectTwo('tblvote','student_id',$getStudent->email,'post','PRO 2') === true): ?>
                                                             <center><span class="badge text-center bg-success text-white fw-bold">You have casted your vote for this category</span></center>
                                                         <?php else: ?>
-                                                            <center><input type="radio" name="pro2" value="<?php echo $getuser->id; ?>" required></center>
-                                                                <input type="text" name="pro2_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                            <form method="POST">
+                                                                <input type="text" name="can_id" value="<?php echo $getuser->id; ?>" hidden>
+                                                                <input type="text" name="can_post" value="<?php echo $getuser->post; ?>" hidden>
+                                                                <input type="submit" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
+                                                            </form>
                                                         <?php endif; ?>
                                                     </div> 
                                                 </div>  
                                             </div>
                                             <?php } ?>
                                         </div>
-                                        <?php if($admin->checkUserVoteStatus($getStudent->email) !== true): ?>
-                                        <input type="submit" id="btnSubmitVote" name="btnSubmitVote" class="btn-block btn btn-md btn-dark" value="Vote">
-                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        </form>
                     </div>
                 </div>
             </div>

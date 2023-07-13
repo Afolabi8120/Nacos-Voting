@@ -24,12 +24,12 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="user_management">
                         <i class="fas fa-user"></i>
                         <p>User Management</p>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                     <a href="vote-statistic">
@@ -74,46 +74,11 @@
                     </span>
                     <h4 class="text-section">Menu</h4>
                 </li>
-                    
-                <li class="nav-item">
-                    <a href="profile">
-                        <i class="fas fa-user-circle"></i>
-                        <p>Profile</p>
-                    </a>
-                </li>
 
                 <li class="nav-item">
-                    <a href="add_material">
-                        <i class="fas fa-book"></i>
-                        <p>Add Course Material</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="result">
-                        <i class="fas fa-folder"></i>
-                        <p>Add Result</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="all-student">
-                        <i class="fas fa-user-circle"></i>
-                        <p>All Student</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="payments">
+                    <a href="vote-statistic">
                         <i class="fas fa-folder-open"></i>
-                        <p>Paid Payment</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="change_password">
-                        <i class="fas fa-cog"></i>
-                        <p>Change Password</p>
+                        <p>Vote Statistics</p>
                     </a>
                 </li>
 
@@ -146,39 +111,11 @@
                     </span>
                     <h4 class="text-section">Menu</h4>
                 </li>
-                    
-                <li class="nav-item">
-                    <a href="profile">
-                        <i class="fas fa-user-circle"></i>
-                        <p>Profile</p>
-                    </a>
-                </li>
 
                 <li class="nav-item">
-                    <a href="add-post">
-                        <i class="fas fa-book"></i>
-                        <p>Add Post</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="post-record">
+                    <a href="vote-statistic">
                         <i class="fas fa-folder-open"></i>
-                        <p>Post Record</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="library">
-                        <i class="fas fa-book"></i>
-                        <p>E Library</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="change_password">
-                        <i class="fas fa-cog"></i>
-                        <p>Change Password</p>
+                        <p>Vote Statistics</p>
                     </a>
                 </li>
 

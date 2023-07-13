@@ -19,7 +19,7 @@
                     <div class="card">
                         <div class="card-header">
                             <center><a href="index"><img src="./assets/img/icon.png" height="60px" width="60px" class="mb-3"></a></center>
-                            <h3 class="text-center text-dark fw-bold">NACOS Decide 2023</h3>
+                            <h3 class="text-center text-dark fw-bold">NACOS Decide <?= date('Y'); ?></h3>
                             <h6 class="text-center">Log in with the details you provided on the <strong>NACOS Portal</strong> during registration</h6>
                             <?php
                                 echo ErrorMessage();

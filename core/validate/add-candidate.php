@@ -38,11 +38,15 @@
 
     }elseif(isset($_POST['btn_delete_candidate']) && !empty($_POST['btn_delete_candidate'])){ // to delete account
         $candidate_id = $_POST['candidate_id'];
+        $candidate_img = $_POST['candidate_img'];
 
         if($admin->deleteCandidate($candidate_id)){
-            $_SESSION['SuccessMessage'] = "Account has been deleted successfully";
+            if($img_path = '../candidate_image/' . $candidate_img){
+                unlink($img_path);
+                $_SESSION['SuccessMessage'] = "Candidate has been deleted successfully";
+            }
         }else{
-            $_SESSION['ErrorMessage'] = "Failed to delete account";
+            $_SESSION['ErrorMessage'] = "Failed to delete candidate";
         }
     }
 
