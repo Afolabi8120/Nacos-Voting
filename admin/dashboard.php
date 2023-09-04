@@ -118,15 +118,15 @@
                                     </div>
                                     <div class="card-body" >
                                         <div class="row">
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-12">
                                                 <canvas id="barChart" style="width: 50%; height: 50%"></canvas>
                                             </div>
 
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-6">
                                                 <canvas id="pieChart" style="width: 50%; height: 50%"></canvas>
                                             </div>
 
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-6">
                                                 <canvas id="doughnutChart" style="width: 50%; height: 50%"></canvas>
                                             </div>
                                         </div>
@@ -141,15 +141,15 @@
                                     </div>
                                     <div class="card-body" >
                                         <div class="row">
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-12">
                                                 <canvas id="barChart2" style="width: 50%; height: 50%"></canvas>
                                             </div>
 
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-6">
                                                 <canvas id="pieChart2" style="width: 50%; height: 50%"></canvas>
                                             </div>
 
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-6">
                                                 <canvas id="doughnutChart2" style="width: 50%; height: 50%"></canvas>
                                             </div>
                                         </div>
@@ -164,15 +164,15 @@
                                     </div>
                                     <div class="card-body" >
                                         <div class="row">
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-12">
                                                 <canvas id="barChart3" style="width: 50%; height: 50%"></canvas>
                                             </div>
 
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-6">
                                                 <canvas id="pieChart3" style="width: 50%; height: 50%"></canvas>
                                             </div>
 
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-6">
                                                 <canvas id="doughnutChart3" style="width: 50%; height: 50%"></canvas>
                                             </div>
                                         </div>
@@ -187,15 +187,15 @@
                                     </div>
                                     <div class="card-body" >
                                         <div class="row">
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-12">
                                                 <canvas id="barChart4" style="width: 50%; height: 50%"></canvas>
                                             </div>
 
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-6">
                                                 <canvas id="pieChart4" style="width: 50%; height: 50%"></canvas>
                                             </div>
 
-                                            <div class="chart-container col-md-4">
+                                            <div class="chart-container col-md-6">
                                                 <canvas id="doughnutChart4" style="width: 50%; height: 50%"></canvas>
                                             </div>
                                         </div>

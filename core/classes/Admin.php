@@ -178,6 +178,13 @@
 			return $stmt->fetchAll(PDO::FETCH_OBJ);
 		}
 
+		public function fetchAllVotes(){
+			$stmt = $this->pdo->prepare("SELECT DISTINCT(c.id), c.fullname, c.post FROM tblvote AS v INNER JOIN tblcandidate AS c ON v.candidate_id = c.id ORDER BY c.post ASC");
+			$stmt->execute();
+
+			return $stmt->fetchAll(PDO::FETCH_OBJ);
+		}
+
 		public function forProgressBar($email){
 			$stmt = $this->pdo->prepare("SELECT c.fullname, c.post FROM tblvote AS v INNER JOIN tblcandidate AS c ON v.candidate_id = c.id WHERE v.student_id = '$email' ");
 			$stmt->execute();
@@ -186,7 +193,8 @@
 		}
 
 		public function getTotalCandidateVote($can_id){
-			$stmt = $this->pdo->prepare("SELECT candidate_id FROM tblvote WHERE candidate_id = '$can_id' ");
+			$stmt = $this->pdo->prepare("SELECT candidate_id FROM tblvote WHERE candidate_id = :can_id ");
+			$stmt->bindParam(":can_id", $can_id, PDO::PARAM_STR);
 			$stmt->execute();
 
 			$user = $stmt->fetch(PDO::FETCH_OBJ);

@@ -40,6 +40,13 @@
                             $stu->updateSession($_SESSION['username'], $_SESSION['session_id']);
                             header('location: '.BASE_URL.'admin/dashboard');
                         }
+                    }elseif($getStudentDetails->usertype == 'User'){
+                        if($getStudentDetails->status == 'Active'){
+                            $_SESSION['session_id'] = session_id();
+                            $_SESSION['inec'] = $getStudentDetails->email;
+                            $stu->updateSession($_SESSION['inec'], $_SESSION['session_id']);
+                            header('location: '.BASE_URL.'inec/dashboard');
+                        }
                     }
                 }elseif(!password_verify($password, $getStudentDetails->password)){
                     $_SESSION['ErrorMessage'] = "Invalid Details Provided";

@@ -1,6 +1,6 @@
 <?php
 	require('../core/init.php');;
-	session_destroy();
+	unset($_SESSION['matricno']);
 
 	header('location: '.BASE_URL.'login');
 

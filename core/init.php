@@ -33,8 +33,12 @@
     }
 
     function TestMessage(){
-        if(isset($_SESSION['TestMessage'])){
-            return $_SESSION['TestMessage'];
+        if(isset($_SESSION['SuccessMessage'])){
+            $output = '<div class = "alert alert-success bg-info text-white" style = "text-align: center;" role = "alert">';
+            $output .= htmlentities($_SESSION['SuccessMessage']);
+            $output .= '</div>';
+            $_SESSION['SuccessMessage'] = null;
+            return $output;
         }
 
     }
