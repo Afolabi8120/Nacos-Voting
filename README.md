@@ -6,12 +6,17 @@ Students don't have to register, their data is being fetched from the department
 # Screenshot of the System
 
 #### Admin Dashboard
-![Dashboard Admin](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/089b628d-289d-48d5-98e4-7cae9010f3dc)
+![Dashboard Admin](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/838e335d-7d46-40ce-912a-cb21ee8cdcc5)
+
 #### Vote Stats
-![Vote Stats](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/2806d694-1c7a-4a2b-92ec-ab87a85924eb)
+![Vote Stats](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/cbf9d05d-261c-4d9e-87a5-b243a94a1375)
+
 #### Vote Summary
-![Vote Data](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/9d0d7ddb-f5ba-4028-b2ea-8cb08846edec)
+![Vote Data](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/64e3a319-579b-4d55-a584-14eae926b4b8)
+
 #### User Dashboard before Voting
-![User Dashboard before Voting](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/5985de98-1f53-48c9-a2e9-eda8ed5fa307)
+![User Dashboard before Voting](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/538b418e-ed9c-4b77-b7b1-97191104e979)
+
 #### User Dashboard after Voting
-![User Dashboard after Voting](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/9a8be5aa-603b-47d2-8824-d09bff6c6473)
+![User Dashboard after Voting](https://github.com/Afolabi8120/Nacos-Voting/assets/46169907/13e5e0ca-9dae-4d0d-8960-54c9c9aa24f6)
+
